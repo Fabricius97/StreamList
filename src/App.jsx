@@ -1,16 +1,12 @@
 import React from "react";
-import { Button, Typography } from "@mui/material";
+import Navbar from "./components/Navbar";
+import { Box } from "@mui/material"; // Importera Box från MUI
 
 const App = () => {
   return (
-    <div style={{ padding: "20px" }}>
-      <Typography variant="h3" color="primary">
-        Welcome to my Movie Website
-      </Typography>
-      <Button variant="contained" color="primary">
-        Get Started
-      </Button>
-    </div>
+    <Box sx={{ padding: "20px" }}>
+      <Navbar />
+    </Box>
   );
 };
 
