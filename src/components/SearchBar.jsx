@@ -37,8 +37,8 @@ const SearchBar = () => {
           edge="start"
           sx={{
             color: "#fff",
-            width: "40px",
-            height: "40px",
+            width: "35px",
+            padding: "0px",
           }}
         >
           <SearchIcon />
@@ -61,13 +61,13 @@ const SearchBar = () => {
             transition: "width 0.3s ease-in-out", // Animering
             overflow: "hidden",
             "& .MuiInput-underline:before": {
-              borderBottom: "2px solid #fff", // Underlinje i normalt läge
+              borderBottom: "1px solid #fff", // Underlinje i normalt läge
             },
             "& .MuiInput-underline:hover:not(.Mui-disabled):before": {
-              borderBottom: "2px solid #fff", // Underlinje vid hover
+              borderBottom: "1px solid #fff", // Underlinje vid hover
             },
             "& .MuiInput-underline:after": {
-              borderBottom: "2px solid #fff", // Underlinje vid fokus
+              borderBottom: "1px solid #fff", // Underlinje vid fokus
             },
           }}
         />
