@@ -1,8 +1,6 @@
 {
   "navbar": [
-    { "name": "Home", "path": "/" },
     { "name": "Movies", "path": "/movies" },
-    { "name": "Series", "path": "/series" },
-    { "name": "About", "path": "/about" }
+    { "name": "Series", "path": "/series" }
   ]
 }

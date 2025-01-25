@@ -1,12 +1,13 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 
-const StreamCard = ({ data }) => {
+const StreamCard = ({ data, onClick }) => {
   const extractYear = (dateString) => {
     return dateString ? new Date(dateString).getFullYear() : "Unknown Date";
   };
   return (
     <Box
+      onClick={onClick}
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -16,6 +17,7 @@ const StreamCard = ({ data }) => {
         backgroundColor: "rgba(255, 255, 255, 0.1)",
         color: "white",
         transition: "transform 0.3s ease",
+        cursor: "pointer",
         "&:hover": {
           transform: "scale(1.05)",
         },

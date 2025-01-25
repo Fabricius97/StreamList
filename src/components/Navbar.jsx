@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   AppBar,
   Toolbar,
@@ -18,14 +18,36 @@ const Navbar = () => {
   const navLinks = navData.navbar;
   const isMobile = useMediaQuery("(max-width:768px)");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
-      <AppBar position="static" color="primary">
+      <AppBar
+        position="fixed"
+        elevation={0}
+        color="transparent"
+        sx={{
+          backgroundColor: scrolled ? "rgba(0, 0, 0, 0.9)" : "transparent",
+          transition: "background-color 0.3s ease-in-out",
+        }}
+      >
         <Toolbar
           sx={{
             display: "flex",
