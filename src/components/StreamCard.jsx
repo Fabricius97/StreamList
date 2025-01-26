@@ -11,7 +11,7 @@ const StreamCard = ({ data, onClick }) => {
       sx={{
         display: "flex",
         flexDirection: "column",
-        width: "230px",
+
         gap: "10px",
         borderRadius: "8px",
         backgroundColor: "rgba(255, 255, 255, 0.1)",
@@ -26,7 +26,7 @@ const StreamCard = ({ data, onClick }) => {
       <Box
         component="img"
         src={
-          `https://image.tmdb.org/t/p/w200${data?.poster_path}` ||
+          `https://image.tmdb.org/t/p/w300${data?.backdrop_path}` ||
           "https://via.placeholder.com/200x300"
         }
         alt={data?.title || data?.name || "Unknown Title"}
