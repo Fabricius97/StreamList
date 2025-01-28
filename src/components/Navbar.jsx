@@ -46,6 +46,7 @@ const Navbar = () => {
         sx={{
           backgroundColor: scrolled ? "rgba(0, 0, 0, 0.9)" : "transparent",
           transition: "background-color 0.3s ease-in-out",
+          padding: { xs: "0 10px", md: "0 150px" },
         }}
       >
         <Toolbar

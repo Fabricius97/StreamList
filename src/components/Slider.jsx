@@ -10,7 +10,7 @@ const Slider = ({ data, setSelectedItem, title }) => {
   return (
     <Box
       sx={{
-        width: "100%",
+        width: "80%",
         padding: "20px 0",
       }}
     >
@@ -30,8 +30,9 @@ const Slider = ({ data, setSelectedItem, title }) => {
         spaceBetween={20} // Space between slides
         slidesPerView={4} // Default number of visible slides
         breakpoints={{
-          320: { slidesPerView: 1 }, // Small screens
-          768: { slidesPerView: 2 }, // Medium screens
+          0: { slidesPerView: 1 },
+          445: { slidesPerView: 2 }, // Small screens
+          768: { slidesPerView: 3 }, // Medium screens
           1200: { slidesPerView: 4 }, // Large screens
         }}
       >
