@@ -11,10 +11,10 @@ const StreamCard = ({ data, onClick }) => {
       sx={{
         display: "flex",
         flexDirection: "column",
-
+        margin: "10px",
         gap: "10px",
         borderRadius: "8px",
-        backgroundColor: "rgba(255, 255, 255, 0.1)",
+        backgroundColor: "rgba(27, 27, 27, 0.3)",
         color: "white",
         transition: "transform 0.3s ease",
         cursor: "pointer",
@@ -44,8 +44,7 @@ const StreamCard = ({ data, onClick }) => {
         sx={{
           display: "flex",
           justifyContent: "space-between",
-
-          padding: "0 10px",
+          padding: "10px 10px",
         }}
       >
         <Box
@@ -63,7 +62,7 @@ const StreamCard = ({ data, onClick }) => {
           </Typography>
         </Box>
         <Typography variant="body2" color="inherit">
-          {data?.media_type || "N/A"}
+          {data?.media_type || ""}
         </Typography>
       </Box>
     </Box>

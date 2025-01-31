@@ -31,8 +31,8 @@ const Slider = ({ data, setSelectedItem, title }) => {
         slidesPerView={4} // Default number of visible slides
         breakpoints={{
           0: { slidesPerView: 1 },
-          445: { slidesPerView: 2 }, // Small screens
-          768: { slidesPerView: 3 }, // Medium screens
+          // Small screens
+          768: { slidesPerView: 2 }, // Medium screens
           1200: { slidesPerView: 4 }, // Large screens
         }}
       >

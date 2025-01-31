@@ -15,6 +15,23 @@ export const fetchTrending = async () => {
   }
 };
 
+export const fetchPopular = async () => {
+  try {
+    const [moviesResponse, tvResponse] = await Promise.all([
+      axios.get(`${BASE_URL}/movie/popular`, { params: { api_key: API_KEY } }),
+      axios.get(`${BASE_URL}/tv/popular`, { params: { api_key: API_KEY } }),
+    ]);
+
+    return [...moviesResponse.data.results, ...tvResponse.data.results]; // Kombinera resultaten
+  } catch (error) {
+    console.error(
+      "Error fetching popular data:",
+      error.response?.data || error.message
+    );
+    throw new Error("Failed to fetch popular data");
+  }
+};
+
 // Funktion för att hämta detaljer om en specifik film/serie
 export const fetchDetails = async (id, type) => {
   try {
